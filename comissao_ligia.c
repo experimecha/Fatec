@@ -7,7 +7,7 @@ int main(void)
     float valor_transacao;
 
     float comissao; /*o programa tava dando problema porque voce estava fazendo contas com variaveis que ainda nao haviam sido digitadas pelo usuario.
-    Além disso, a conta estava errada, por exemplo:
+    AlÃ©m disso, a conta estava errada, por exemplo:
     float comissao_1 = 1.7/100 + 30;
     Comissao de: %.2f\n",valor_transacao * comissao_1
     mas isso eh mais facil eu explicar pessoalmente xD
@@ -16,7 +16,7 @@ int main(void)
     printf("Digite o valor da transacao:\n");
     scanf("%f", &valor_transacao);
 
-    if(valor_transacao <= 2500) //aqui voce estava colocando os numeros tipo assim "2.500", como costumamos escrever em portugues, porém em C o compilador entende que o ponto é referente à float, e por tbm isso seus resultados saíam esquisitos
+    if(valor_transacao <= 2500) //aqui voce estava colocando os numeros tipo assim "2.500", como costumamos escrever em portugues, porÃ©m em C o compilador entende que o ponto Ã© referente Ã  float, e por tbm isso seus resultados saÃ­am esquisitos
         comissao = (((valor_transacao)*(1.7/100)) + 30);
     {
         if (((valor_transacao)*(1.7/100))>9)
