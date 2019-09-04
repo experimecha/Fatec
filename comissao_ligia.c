@@ -4,9 +4,8 @@
 int main(void)
 
 {
-    float valor_transacao;
-
-    float comissao; /*o programa tava dando problema porque voce estava fazendo contas com variaveis que ainda nao haviam sido digitadas pelo usuario.
+    float valor_transacao=0;
+    float comissao=0; /*o programa tava dando problema porque voce estava fazendo contas com variaveis que ainda nao haviam sido digitadas pelo usuario.
     Além disso, a conta estava errada, por exemplo:
     float comissao_1 = 1.7/100 + 30;
     Comissao de: %.2f\n",valor_transacao * comissao_1
@@ -27,43 +26,39 @@ int main(void)
         {
             printf("Comissao minima, de 39 reais");
         }
-
     }
 
-
-        else if (valor_transacao >= 2.501 && valor_transacao <= 6.250)
+        if (valor_transacao >= 2501 && valor_transacao <= 6250)
         {
             comissao =(((valor_transacao)*(0.66/100)) + 56);
             printf("Comissao de: %.2f\n", comissao);
         }
 
-        else if (valor_transacao >= 6.251 && valor_transacao <= 20.000)
+        else if (valor_transacao >= 6251 && valor_transacao <= 20000)
         {
             (((valor_transacao)*(0.34/100)) + 76);
             printf("Comissao de: %.2f\n", comissao);
 
         }
 
-        else if (valor_transacao >= 20.001 && valor_transacao <= 50.000)
+        else if (valor_transacao >= 20001 && valor_transacao <= 50000)
         {
             comissao = (((valor_transacao)*(0.22/100)) + 100);
             printf("Comissao de: %.2f\n", comissao);
         }
 
-        else if (valor_transacao >= 50.001 && valor_transacao <= 500.000)
+        else if (valor_transacao >= 50001 && valor_transacao <= 500000)
         {
             comissao = (((valor_transacao)*(0.11/100)) + 155);
             printf("Comissao de: %.2f\n", comissao);
         }
 
 
-        else
+        else if (valor_transacao > 500000) // descobri que nao pode se colocar um 'else' após um 'else if'. o 'else' só pode aparecer após um 'if'.
         {
             comissao =(((valor_transacao)*(0.09/100)) + 255);
             printf("Comissao de: %.2f\n", comissao);
         }
-
-
 
     return 0;
 
