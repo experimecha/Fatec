@@ -9,9 +9,6 @@ int main ()
 
     printf("Dado o conjunto A, tal que 0<=x<256, digite um numero que pertenca ao intervalo expresso.");
     scanf("%d", &x);
-
-
-
     for(i=0; i<7; i++)
     {
         if((x/2)<=1)
@@ -25,7 +22,4 @@ int main ()
             x=x/2;
         }
     }
-
-
-
 }
