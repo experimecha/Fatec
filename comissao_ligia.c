@@ -5,7 +5,8 @@ int main(void)
 
 {
     float valor_transacao=0;
-    float comissao=0; /*o programa tava dando problema porque voce estava fazendo contas com variaveis que ainda nao haviam sido digitadas pelo usuario.
+    float comissao=0; /*o programa tava dando problema porque voce estava fazendo contas com variaveis que ainda nao 
+    haviam sido digitadas pelo usuario.
     Além disso, a conta estava errada, por exemplo:
     float comissao_1 = 1.7/100 + 30;
     Comissao de: %.2f\n",valor_transacao * comissao_1
@@ -19,12 +20,14 @@ int main(void)
     {
         printf("Comissao minima, de 39 reais");
     }
-    else if (valor_transacao <= 2500) //aqui voce estava colocando os numeros tipo assim "2.500", como costumamos escrever em portugues, porém em C o compilador entende que o ponto é referente à float, e por tbm isso seus resultados saíam esquisitos
+    else if (valor_transacao <= 2500) /*aqui voce estava colocando os numeros tipo assim "2.500", como costumamos escrever 
+        em portugues, porém em C o compilador entende que o ponto é referente à float, e por tbm isso seus resultados saíam 
+        esquisitos */
     {
         comissao = (((valor_transacao)*(1.7/100)) + 30);
         printf("Comissao de: %.2f\n", comissao);
     }
-
+    
     else if (valor_transacao >= 2501 && valor_transacao <= 6250)
     {
         comissao =(((valor_transacao)*(0.66/100)) + 56);
@@ -49,7 +52,8 @@ int main(void)
         printf("Comissao de: %.2f\n", comissao);
     }
 
-    else if (valor_transacao > 500000) // descobri que nao pode se colocar um 'else' após um 'else if'. o 'else' só pode aparecer após um 'if'.
+    else if (valor_transacao > 500000) /* descobri que nao pode se colocar um 'else' após um 'else if'. 
+    o 'else' só pode aparecer após um 'if'. */
     {
         comissao =(((valor_transacao)*(0.09/100)) + 255);
         printf("Comissao de: %.2f\n", comissao);
