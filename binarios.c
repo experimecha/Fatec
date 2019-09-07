@@ -6,7 +6,7 @@ int main ()
     int i, x;
     int binario[8];
 
-    printf("Dado o conjunto A, tal que 0<=x<256, digite um numero que pertenca ao intervalo expresso.");
+    printf("Dado o conjunto A, tal que x pertence a A e 0<=x<256, digite um numero que pertenca ao intervalo expresso.");
     scanf("%d", &x); //aqui o usuario pode digitar qualquer numero que ele deseje converter para binário, de 0 a 256.
     for (i=1; i<9; i++)
  
