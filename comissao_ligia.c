@@ -52,8 +52,7 @@ int main(void)
         printf("Comissao de: %.2f\n", comissao);
     }
 
-    else if (valor_transacao > 500000) /* descobri que nao pode se colocar um 'else' após um 'else if'. 
-    o 'else' só pode aparecer após um 'if'. */
+    else if (valor_transacao > 500000) 
     {
         comissao =(((valor_transacao)*(0.09/100)) + 255);
         printf("Comissao de: %.2f\n", comissao);
